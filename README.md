@@ -1,6 +1,6 @@
 # INTERNSHIP-1 App Development Internship
 
-## Bharat Intern  <img src="https://bharatintern.live/b/icons/logoNoBg.png" alt="Bharat Intern Icon" style="float:right;">
+## Bharat Intern  <img src="https://bharatintern.live/b/icons/logoNoBg.png" alt="Bharat Intern Icon" style="float:right;height:50px;">
 
 Welcome to my app development internship at Bharat-Intern! In this internship, I've developed two Flutter applications: a to-do list app and a weather forecast app.
 
