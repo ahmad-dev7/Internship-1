@@ -1,4 +1,4 @@
-# INTERNSHIP-1 App Development Internship
+# INTERNSHIP-1 (App Development)
 
 ## Bharat Intern  <img src="https://bharatintern.live/b/icons/logoNoBg.png" alt="Bharat Intern Icon" style="float:right;height:30px;">
 
