@@ -29,14 +29,6 @@ The weather forecast app provides real-time weather information for users. Here 
 
 <!-- You can uncomment the above lines and replace `todo_app_screenshot.png` and `weather_app_screenshot.png` with your actual screenshot file names. -->
 
-## Getting Started
-
-To run these apps on your local machine, follow these steps:
-
-1. Clone this repository.
-2. Navigate to the respective app directories (`todo_app` and `weather_app`).
-3. Run the app using `flutter run`.
-
 ## Contribution
-
+### Open for pull requests
 Feel free to contribute to the improvement of these apps by opening issues or submitting pull requests.
