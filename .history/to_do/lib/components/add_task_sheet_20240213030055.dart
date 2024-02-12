@@ -10,7 +10,7 @@ import 'package:to_do/components/styled_textfield.dart';
 import 'package:to_do/model/tasks.dart';
 
 class AddTaskSheet extends StatefulWidget {
-  final Function() onClose;
+  final Function(bool isAdded)? onClose;
   final int? id;
   final String? heading, about, date, time, btnLabel;
   const AddTaskSheet({
@@ -21,7 +21,7 @@ class AddTaskSheet extends StatefulWidget {
     this.date,
     this.time,
     this.btnLabel,
-    required this.onClose,
+    this.onClose,
   });
 
   @override
@@ -179,8 +179,7 @@ class _AddTaskSheetState extends State<AddTaskSheet> {
                                 int id = taskBox.isEmpty
                                     ? 0
                                     : taskCount.keys.last + 1;
-                                TaskServices()
-                                    .addTask(
+                                TaskServices().addTask(
                                   task: Tasks(
                                     id: widget.id ?? id,
                                     heading: headingController.text,
@@ -190,25 +189,6 @@ class _AddTaskSheetState extends State<AddTaskSheet> {
                                     isDone: false,
                                   ),
                                   isEdit: widget.id == null ? false : true,
-                                )
-                                    .then(
-                                  (value) {
-                                    setState(
-                                      () {
-                                        widget.onClose();
-                                        Navigator.pop(context);
-                                        ScaffoldMessenger.of(context)
-                                            .showSnackBar(
-                                          SnackBar(
-                                            backgroundColor: Colors.green,
-                                            content: Text(
-                                              'Task ${widget.id == null ? 'added' : 'edited'} successfully',
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    );
-                                  },
                                 );
                               }
                             },

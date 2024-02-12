@@ -31,7 +31,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   void retrieveTask(String date) {
-    debugPrint('i got called');
     taskList = TaskServices().getTask(date);
   }
 
@@ -277,7 +276,7 @@ class _HomePageState extends State<HomePage> {
                             isDismissible: false,
                             backgroundColor: Colors.transparent,
                             builder: (context) => AddTaskSheet(
-                              onClose: () => setState(() => ''),
+                              onClose: (isAdded) => setState,
                               heading: task.heading,
                               about: task.about,
                               btnLabel: 'Edit',

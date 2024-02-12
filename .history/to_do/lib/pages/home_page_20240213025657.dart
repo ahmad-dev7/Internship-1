@@ -31,7 +31,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   void retrieveTask(String date) {
-    debugPrint('i got called');
     taskList = TaskServices().getTask(date);
   }
 
@@ -51,9 +50,9 @@ class _HomePageState extends State<HomePage> {
           isScrollControlled: true,
           isDismissible: false,
           backgroundColor: Colors.transparent,
-          builder: (context) => AddTaskSheet(
-            onClose: () => setState(() => retrieveTask(date)),
-          ),
+          builder: (context) => const AddTaskSheet(),
+        ).whenComplete(
+          () => retrieveTask(date),
         ),
       ).animate().slideY(duration: const Duration(milliseconds: 500)),
       body: Column(
@@ -277,7 +276,6 @@ class _HomePageState extends State<HomePage> {
                             isDismissible: false,
                             backgroundColor: Colors.transparent,
                             builder: (context) => AddTaskSheet(
-                              onClose: () => setState(() => ''),
                               heading: task.heading,
                               about: task.about,
                               btnLabel: 'Edit',

@@ -1,4 +1,5 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:intl/intl.dart';
@@ -10,7 +11,6 @@ import 'package:to_do/components/styled_textfield.dart';
 import 'package:to_do/model/tasks.dart';
 
 class AddTaskSheet extends StatefulWidget {
-  final Function() onClose;
   final int? id;
   final String? heading, about, date, time, btnLabel;
   const AddTaskSheet({
@@ -21,7 +21,6 @@ class AddTaskSheet extends StatefulWidget {
     this.date,
     this.time,
     this.btnLabel,
-    required this.onClose,
   });
 
   @override
@@ -193,20 +192,14 @@ class _AddTaskSheetState extends State<AddTaskSheet> {
                                 )
                                     .then(
                                   (value) {
-                                    setState(
-                                      () {
-                                        widget.onClose();
-                                        Navigator.pop(context);
-                                        ScaffoldMessenger.of(context)
-                                            .showSnackBar(
-                                          SnackBar(
-                                            backgroundColor: Colors.green,
-                                            content: Text(
-                                              'Task ${widget.id == null ? 'added' : 'edited'} successfully',
-                                            ),
-                                          ),
-                                        );
-                                      },
+                                    Navigator.pop(context);
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        backgroundColor: Colors.green,
+                                        content: Text(
+                                          'Task ${widget.id == null ? 'added' : 'edited'} successfully',
+                                        ),
+                                      ),
                                     );
                                   },
                                 );

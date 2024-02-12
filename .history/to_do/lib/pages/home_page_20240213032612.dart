@@ -31,7 +31,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   void retrieveTask(String date) {
-    debugPrint('i got called');
     taskList = TaskServices().getTask(date);
   }
 

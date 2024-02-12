@@ -10,7 +10,7 @@ import 'package:to_do/components/styled_textfield.dart';
 import 'package:to_do/model/tasks.dart';
 
 class AddTaskSheet extends StatefulWidget {
-  final Function() onClose;
+  final Function(bool isAdded) onClose;
   final int? id;
   final String? heading, about, date, time, btnLabel;
   const AddTaskSheet({
@@ -195,7 +195,7 @@ class _AddTaskSheetState extends State<AddTaskSheet> {
                                   (value) {
                                     setState(
                                       () {
-                                        widget.onClose();
+                                        widget.onClose(true);
                                         Navigator.pop(context);
                                         ScaffoldMessenger.of(context)
                                             .showSnackBar(
