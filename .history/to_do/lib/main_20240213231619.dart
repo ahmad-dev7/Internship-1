@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:to_do/Services/task_services.dart';
-import 'package:to_do/components/animated_splash_screen.dart';
+import 'package:to_do/components/splash_screen.dart';
 import 'package:to_do/pages/name_page.dart';
 import 'package:to_do/pages/home_page.dart';
 import 'package:to_do/model/tasks.dart';
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'To Do app',
-      home: AnimatedSplashScreen(),
+      home: SplashScreenAnimation(),
     );
   }
 }

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:to_do/Services/task_services.dart';
-import 'package:to_do/components/animated_splash_screen.dart';
 import 'package:to_do/pages/name_page.dart';
 import 'package:to_do/pages/home_page.dart';
 import 'package:to_do/model/tasks.dart';
@@ -21,10 +20,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'To Do app',
-      home: AnimatedSplashScreen(),
+      home: userInfo.isEmpty ? const GetUserName() : const HomePage(),
     );
   }
 }

@@ -18,8 +18,11 @@ class CalendarContainer extends StatelessWidget {
           end: Alignment.bottomCenter,
           tileMode: TileMode.decal,
           colors: [
+            // Color.fromARGB(203, 0, 0, 0),
+            // Color.fromARGB(106, 0, 0, 0),
             Color(0xC9272C2E),
             Color(0xC9272C2E),
+            // Colors.white,
           ],
         ),
         borderRadius: BorderRadius.circular(15),
