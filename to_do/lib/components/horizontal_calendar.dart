@@ -139,25 +139,6 @@ class _CalendarState extends State<HorizontalCalendar> {
                       spreadRadius: 1,
                     ),
                   ],
-                  // gradient: const LinearGradient(
-                  //   begin: Alignment.topCenter,
-                  //   end: Alignment.bottomCenter,
-                  //   tileMode: TileMode.repeated,
-                  //   colors: [
-                  //     Colors.white,
-                  //     Colors.white,
-                  //     Colors.white,
-                  //     Color(0xFF1F2426),
-                  //     Color(0xFF1F2426),
-                  //     Color(0xFF1F2426),
-                  //   ],
-                  // ),
-                  // color: diffDays != 0
-                  //     ? widget.backgroundColor ?? Colors.transparent
-                  //     : widget.selectedColor ?? Colors.blueGrey.shade900,
-                  // border: Border.all(
-                  //     color: Colors.grey.withOpacity(0.5), width: 0.1),
-                  // borderRadius: BorderRadius.circular(15),
                 ),
                 child: InkWell(
                   splashColor: Colors.transparent,
