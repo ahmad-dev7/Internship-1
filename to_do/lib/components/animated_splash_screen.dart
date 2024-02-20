@@ -27,7 +27,7 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
       PageRouteBuilder(
         pageBuilder: (_, __, ___) =>
             userInfo.isEmpty ? const GetUserName() : const HomePage(),
-        transitionDuration: const Duration(seconds: 2),
+        transitionDuration: const Duration(milliseconds: 400),
         transitionsBuilder: (_, a, __, c) =>
             FadeTransition(opacity: a, child: c),
       ),
@@ -37,7 +37,7 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF2B3032),
+      backgroundColor: const Color(0xff313638),
       body: Center(
         child: Lottie.asset(
           'images/splash_animation.json',
