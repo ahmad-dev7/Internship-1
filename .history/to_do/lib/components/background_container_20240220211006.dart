@@ -11,12 +11,11 @@ class BackgroundContainer extends StatelessWidget {
       width: double.maxFinite,
       height: MediaQuery.of(context).size.height - 245,
       decoration: BoxDecoration(
-        color: Colors.grey[300],
+        color: Colors.white[400]!.withOpacity(0.1),
         image: const DecorationImage(
           image: AssetImage('images/silver-cloth-abstract-background.jpg'),
           fit: BoxFit.fill,
           opacity: .21,
-          colorFilter: ColorFilter.linearToSrgbGamma(),
         ),
       ),
       child: child,

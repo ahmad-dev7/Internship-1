@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:simple_shadow/simple_shadow.dart';
 import 'package:to_do/Services/task_services.dart';
 import 'package:to_do/pages/home_page.dart';
 import 'package:to_do/pages/name_page.dart';
@@ -18,6 +17,9 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
 
   @override
   void initState() {
+    taskBox.clear();
+    taskCount.clear();
+    userInfo.clear();
     super.initState();
     _controller = AnimationController(vsync: this);
   }
@@ -38,22 +40,17 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFE6E6E6),
+      backgroundColor: const Color(0xFF222729),
       body: Center(
-        child: SimpleShadow(
-          color: Colors.black,
-          offset: const Offset(4, 4),
-          sigma: 5,
-          child: Lottie.asset(
-            'images/splash_animation.json',
-            height: MediaQuery.of(context).size.height * 0.4,
-            controller: _controller,
-            onLoaded: (composition) {
-              _controller
-                ..duration = composition.duration
-                ..forward().whenComplete(navigateUser);
-            },
-          ),
+        child: Lottie.asset(
+          'images/splash_animation.json',
+          height: MediaQuery.of(context).size.height * 0.4,
+          controller: _controller,
+          onLoaded: (composition) {
+            _controller
+              ..duration = composition.duration
+              ..forward().whenComplete(navigateUser);
+          },
         ),
       ),
     );

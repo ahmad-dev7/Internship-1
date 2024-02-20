@@ -11,7 +11,7 @@ class BackgroundContainer extends StatelessWidget {
       width: double.maxFinite,
       height: MediaQuery.of(context).size.height - 245,
       decoration: BoxDecoration(
-        color: Colors.grey[300],
+        color: Colors.grey[200],
         image: const DecorationImage(
           image: AssetImage('images/silver-cloth-abstract-background.jpg'),
           fit: BoxFit.fill,

@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.grey[500],
       resizeToAvoidBottomInset: false,
       floatingActionButton: FloatingActionButton.extended(
         elevation: 20,

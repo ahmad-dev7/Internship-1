@@ -18,6 +18,9 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
 
   @override
   void initState() {
+    taskBox.clear();
+    taskCount.clear();
+    userInfo.clear();
     super.initState();
     _controller = AnimationController(vsync: this);
   }
@@ -38,7 +41,7 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFE6E6E6),
+      backgroundColor: const Color.fromARGB(255, 230, 230, 230),
       body: Center(
         child: SimpleShadow(
           color: Colors.black,

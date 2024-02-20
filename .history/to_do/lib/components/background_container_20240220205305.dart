@@ -15,8 +15,7 @@ class BackgroundContainer extends StatelessWidget {
         image: const DecorationImage(
           image: AssetImage('images/silver-cloth-abstract-background.jpg'),
           fit: BoxFit.fill,
-          opacity: .21,
-          colorFilter: ColorFilter.linearToSrgbGamma(),
+          opacity: 0.05,
         ),
       ),
       child: child,

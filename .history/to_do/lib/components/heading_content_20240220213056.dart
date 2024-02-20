@@ -22,7 +22,6 @@ class HeadingContent extends StatelessWidget {
               TextSpan(
                 text: userName,
                 style: style(
-                  color: Colors.grey[300],
                   weight: FontWeight.w500,
                   size: 20,
                   letterSpacing: 2,
@@ -45,7 +44,6 @@ class HeadingContent extends StatelessWidget {
         Text(
           'Today',
           style: style(
-            color: Colors.grey[300],
             size: 20,
             weight: FontWeight.w600,
             letterSpacing: 1,
@@ -54,7 +52,7 @@ class HeadingContent extends StatelessWidget {
         Text(
           today,
           style: style(
-            color: Colors.grey[400],
+            color: Colors.grey[300],
             wordSpacing: 3,
             size: 14,
           ),

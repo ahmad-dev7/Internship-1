@@ -45,7 +45,7 @@ class HeadingContent extends StatelessWidget {
         Text(
           'Today',
           style: style(
-            color: Colors.grey[300],
+            color: Colors.blueGrey,
             size: 20,
             weight: FontWeight.w600,
             letterSpacing: 1,

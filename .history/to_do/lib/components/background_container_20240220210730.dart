@@ -13,10 +13,10 @@ class BackgroundContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.grey[300],
         image: const DecorationImage(
-          image: AssetImage('images/silver-cloth-abstract-background.jpg'),
+          image:
+              AssetImage('/to_do/images/silver-cloth-abstract-background.jpg'),
           fit: BoxFit.fill,
-          opacity: .21,
-          colorFilter: ColorFilter.linearToSrgbGamma(),
+          opacity: .31,
         ),
       ),
       child: child,

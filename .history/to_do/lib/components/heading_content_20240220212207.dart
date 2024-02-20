@@ -17,13 +17,12 @@ class HeadingContent extends StatelessWidget {
         RichText(
           text: TextSpan(
             text: 'Hey, ',
-            style: style(size: 19, color: Colors.grey[400]),
+            style: style(size: 18, color: const Color.fromARGB(255, 0, 0, 0)),
             children: [
               TextSpan(
                 text: userName,
                 style: style(
-                  color: Colors.grey[300],
-                  weight: FontWeight.w500,
+                  weight: FontWeight.w400,
                   size: 20,
                   letterSpacing: 2,
                 ),
@@ -35,7 +34,7 @@ class HeadingContent extends StatelessWidget {
         Text(
           'Completed your tasks !!!',
           style: style(
-            size: 19,
+            size: 18,
             color: Colors.grey[400],
             wordSpacing: 3,
             letterSpacing: 2,
@@ -45,18 +44,17 @@ class HeadingContent extends StatelessWidget {
         Text(
           'Today',
           style: style(
-            color: Colors.grey[300],
-            size: 20,
-            weight: FontWeight.w600,
+            size: 19,
+            weight: FontWeight.w500,
             letterSpacing: 1,
           ),
         ),
         Text(
           today,
           style: style(
-            color: Colors.grey[400],
+            color: Colors.grey[300],
             wordSpacing: 3,
-            size: 14,
+            size: 13,
           ),
         ),
       ],

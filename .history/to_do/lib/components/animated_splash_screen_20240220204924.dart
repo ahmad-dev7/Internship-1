@@ -18,6 +18,9 @@ class _AnimatedSplashScreenState extends State<AnimatedSplashScreen>
 
   @override
   void initState() {
+    taskBox.clear();
+    taskCount.clear();
+    userInfo.clear();
     super.initState();
     _controller = AnimationController(vsync: this);
   }

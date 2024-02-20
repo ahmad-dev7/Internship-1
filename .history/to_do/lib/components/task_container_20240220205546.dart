@@ -36,7 +36,7 @@ class TaskContainer extends StatelessWidget {
             opacity: isActive ? 0.3 : 0,
           ),
           color: task.isDone
-              ? Colors.green.withOpacity(isActive ? 0.7 : 0.1)
+              ? Colors.green.withOpacity(isActive ? 1 : 0.2)
               : isActive
                   ? const Color(0xFF2B3032)
                   : Colors.transparent.withAlpha(10),
