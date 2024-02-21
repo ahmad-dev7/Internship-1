@@ -55,14 +55,14 @@ class _HomePageState extends State<HomePage> {
               children: [
                 //* Top background image
                 const HeadingContainer(
-                  height: 280,
+                  height: 250,
                   child: SafeArea(
                     child: Padding(
                       padding: EdgeInsets.only(
                         left: 13,
                         right: 13,
                         top: 15,
-                        bottom: 80,
+                        bottom: 45,
                       ),
                       child: HeadingContent(),
                     ),
@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
 
                 //? Task list view builder
                 Positioned(
-                  top: 285,
+                  top: 250,
                   left: 0,
                   right: 0,
                   child: BackgroundContainer(
@@ -124,7 +124,7 @@ class _HomePageState extends State<HomePage> {
 
                 //* Horizontal date picker [calender]
                 Positioned(
-                  top: 235,
+                  top: 205,
                   right: 0,
                   left: 0,
                   child: CalendarContainer(
@@ -135,6 +135,7 @@ class _HomePageState extends State<HomePage> {
                           date = DateFormat('E, d MMM').format(
                             DateTime.parse(selectedDate),
                           );
+                          current = 0;
                           retrieveTask(date);
                         });
                       },
@@ -160,7 +161,7 @@ class _HomePageState extends State<HomePage> {
         onClose: () => setState(
           () {
             retrieveTask(date);
-            messageAlert('Message added successfully', Colors.green);
+            messageAlert('Task added successfully', Colors.green);
           },
         ),
       ),
@@ -190,7 +191,7 @@ class _HomePageState extends State<HomePage> {
       ),
     ).then((_) {
       retrieveTask(date);
-      messageAlert('Message edited successfully', Colors.blue);
+      messageAlert('Task edited successfully', Colors.blue);
     });
   }
 
