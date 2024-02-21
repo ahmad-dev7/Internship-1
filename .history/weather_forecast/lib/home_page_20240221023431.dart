@@ -29,16 +29,19 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Visibility(
-          visible: temp.isNotEmpty,
-          replacement: const CircularProgressIndicator(),
-          child: Chip(
-            backgroundColor: Colors.blue,
-            label: Text(
-              temp.toString(),
-              style: const TextStyle(fontSize: 25, color: Colors.white),
+            visible: temp.isNotEmpty,
+            replacement: const CircularProgressIndicator(),
+            child: ListTile(
+              title: const Text('Current Temperature is'),
+              subtitle: Text(temp),
+              leading: const Icon(Icons.airplane_ticket),
+              trailing: const Icon(Icons.one_k_sharp),
+            )
+            // Text(
+            //   temp.toString(),
+            //   style: const TextStyle(fontSize: 25),
+            // ),
             ),
-          ),
-        ),
       ),
     );
   }

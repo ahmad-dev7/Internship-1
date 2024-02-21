@@ -35,7 +35,7 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: Colors.blue,
             label: Text(
               temp.toString(),
-              style: const TextStyle(fontSize: 25, color: Colors.white),
+              style: const TextStyle(fontSize: 25),
             ),
           ),
         ),

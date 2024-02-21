@@ -9,16 +9,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String temp = '';
+  late Future<String> temp;
   @override
   void initState() {
-    getTemp();
+    setState(() {
+      temp = getWeather();
+    });
+    temp = getWeather();
     super.initState();
-  }
-
-  getTemp() async {
-    temp = await getWeather();
-    setState(() {});
   }
 
   @override
@@ -29,14 +27,11 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Visibility(
-          visible: temp.isNotEmpty,
+          visible: temp == '0',
           replacement: const CircularProgressIndicator(),
-          child: Chip(
-            backgroundColor: Colors.blue,
-            label: Text(
-              temp.toString(),
-              style: const TextStyle(fontSize: 25, color: Colors.white),
-            ),
+          child: const Text(
+            'Temperature',
+            style: TextStyle(fontSize: 25),
           ),
         ),
       ),

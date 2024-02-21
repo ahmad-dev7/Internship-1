@@ -32,10 +32,9 @@ class _HomePageState extends State<HomePage> {
           visible: temp.isNotEmpty,
           replacement: const CircularProgressIndicator(),
           child: Chip(
-            backgroundColor: Colors.blue,
             label: Text(
               temp.toString(),
-              style: const TextStyle(fontSize: 25, color: Colors.white),
+              style: const TextStyle(fontSize: 25),
             ),
           ),
         ),

@@ -9,7 +9,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  String temp = '';
+  late String temp;
   @override
   void initState() {
     getTemp();
@@ -29,14 +29,11 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Visibility(
-          visible: temp.isNotEmpty,
+          visible: temp.isEmpty,
           replacement: const CircularProgressIndicator(),
-          child: Chip(
-            backgroundColor: Colors.blue,
-            label: Text(
-              temp.toString(),
-              style: const TextStyle(fontSize: 25, color: Colors.white),
-            ),
+          child: Text(
+            temp.toString(),
+            style: const TextStyle(fontSize: 25),
           ),
         ),
       ),

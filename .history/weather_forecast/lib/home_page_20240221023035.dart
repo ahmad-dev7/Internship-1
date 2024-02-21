@@ -29,16 +29,20 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Center(
         child: Visibility(
-          visible: temp.isNotEmpty,
-          replacement: const CircularProgressIndicator(),
-          child: Chip(
-            backgroundColor: Colors.blue,
-            label: Text(
-              temp.toString(),
-              style: const TextStyle(fontSize: 25, color: Colors.white),
+            visible: temp.isNotEmpty,
+            replacement: const CircularProgressIndicator(),
+            child: Chip(
+              label: Text(temp),
+              labelStyle: const TextStyle(fontSize: 25, color: Colors.white),
+              backgroundColor: Colors.blueGrey,
+              deleteIcon: const Icon(Icons.delete, color: Colors.red),
+              onDeleted: () => getTemp(),
+            )
+            // Text(
+            //   temp.toString(),
+            //   style: const TextStyle(fontSize: 25),
+            // ),
             ),
-          ),
-        ),
       ),
     );
   }
